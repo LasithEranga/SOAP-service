@@ -15,12 +15,30 @@ import javax.jws.WebParam;
  */
 @WebService(serviceName = "MyWebService")
 public class MyWebService {
-
-    /**
-     * This is a sample web service operation
-     */
-    @WebMethod(operationName = "hello")
-    public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
+    
+    @WebMethod(operationName = "add")
+    public double add(@WebParam(name = "firstNumber") double firstNumber,@WebParam(name = "secondNumber") double secondNumber) {
+        return firstNumber + secondNumber;
     }
+    
+    @WebMethod(operationName = "divide")
+    public double divide(@WebParam(name = "firstNumber") double firstNumber,@WebParam(name = "secondNumber") double secondNumber) {
+        return firstNumber / secondNumber;
+    }
+    
+    @WebMethod(operationName = "deduct")
+    public double deduct(@WebParam(name = "firstNumber") double firstNumber,@WebParam(name = "secondNumber") double secondNumber) {
+        return firstNumber - secondNumber;
+    }
+    
+    @WebMethod(operationName = "multiply")
+    public double multiply(@WebParam(name = "firstNumber") double firstNumber,@WebParam(name = "secondNumber") double secondNumber) {
+        return firstNumber * secondNumber;
+    }
+    
+    @WebMethod(operationName = "percentage")
+    public double percentage(@WebParam(name="firstNumber") double firstNumber, @WebParam(name="secondNumber") double secondNumber){
+        return (firstNumber * secondNumber)/100;
+    }
+    
 }
