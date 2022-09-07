@@ -26,17 +26,92 @@ public interface MyWebService {
 
     /**
      * 
-     * @param name
+     * @param secondNumber
+     * @param firstNumber
      * @return
-     *     returns java.lang.String
+     *     returns double
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "hello", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.Hello")
-    @ResponseWrapper(localName = "helloResponse", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.HelloResponse")
-    @Action(input = "http://soapserver.mit.kln.lk/MyWebService/helloRequest", output = "http://soapserver.mit.kln.lk/MyWebService/helloResponse")
-    public String hello(
-        @WebParam(name = "name", targetNamespace = "")
-        String name);
+    @RequestWrapper(localName = "add", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.Add")
+    @ResponseWrapper(localName = "addResponse", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.AddResponse")
+    @Action(input = "http://soapserver.mit.kln.lk/MyWebService/addRequest", output = "http://soapserver.mit.kln.lk/MyWebService/addResponse")
+    public double add(
+        @WebParam(name = "firstNumber", targetNamespace = "")
+        double firstNumber,
+        @WebParam(name = "secondNumber", targetNamespace = "")
+        double secondNumber);
+
+    /**
+     * 
+     * @param secondNumber
+     * @param firstNumber
+     * @return
+     *     returns double
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "divide", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.Divide")
+    @ResponseWrapper(localName = "divideResponse", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.DivideResponse")
+    @Action(input = "http://soapserver.mit.kln.lk/MyWebService/divideRequest", output = "http://soapserver.mit.kln.lk/MyWebService/divideResponse")
+    public double divide(
+        @WebParam(name = "firstNumber", targetNamespace = "")
+        double firstNumber,
+        @WebParam(name = "secondNumber", targetNamespace = "")
+        double secondNumber);
+
+    /**
+     * 
+     * @param secondNumber
+     * @param firstNumber
+     * @return
+     *     returns double
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "percentage", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.Percentage")
+    @ResponseWrapper(localName = "percentageResponse", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.PercentageResponse")
+    @Action(input = "http://soapserver.mit.kln.lk/MyWebService/percentageRequest", output = "http://soapserver.mit.kln.lk/MyWebService/percentageResponse")
+    public double percentage(
+        @WebParam(name = "firstNumber", targetNamespace = "")
+        double firstNumber,
+        @WebParam(name = "secondNumber", targetNamespace = "")
+        double secondNumber);
+
+    /**
+     * 
+     * @param secondNumber
+     * @param firstNumber
+     * @return
+     *     returns double
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "multiply", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.Multiply")
+    @ResponseWrapper(localName = "multiplyResponse", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.MultiplyResponse")
+    @Action(input = "http://soapserver.mit.kln.lk/MyWebService/multiplyRequest", output = "http://soapserver.mit.kln.lk/MyWebService/multiplyResponse")
+    public double multiply(
+        @WebParam(name = "firstNumber", targetNamespace = "")
+        double firstNumber,
+        @WebParam(name = "secondNumber", targetNamespace = "")
+        double secondNumber);
+
+    /**
+     * 
+     * @param secondNumber
+     * @param firstNumber
+     * @return
+     *     returns double
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "deduct", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.Deduct")
+    @ResponseWrapper(localName = "deductResponse", targetNamespace = "http://soapserver.mit.kln.lk/", className = "lk.kln.mit.soapserver.DeductResponse")
+    @Action(input = "http://soapserver.mit.kln.lk/MyWebService/deductRequest", output = "http://soapserver.mit.kln.lk/MyWebService/deductResponse")
+    public double deduct(
+        @WebParam(name = "firstNumber", targetNamespace = "")
+        double firstNumber,
+        @WebParam(name = "secondNumber", targetNamespace = "")
+        double secondNumber);
 
 }

@@ -43,24 +43,6 @@
                         <id>wsimport-generate-MyWebService</id>
                         <phase>generate-sources</phase>
                     </execution>
-                    <execution>
-                        <goals>
-                            <goal>wsimport</goal>
-                        </goals>
-                        <configuration>
-                            <wsdlFiles>
-                                <wsdlFile>localhost_8080/SOAPServer/MyWebService.wsdl</wsdlFile>
-                            </wsdlFiles>
-                            <packageName></packageName>
-                            <vmArgs>
-                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
-                            </vmArgs>
-                            <wsdlLocation>http://localhost:8080/SOAPServer/MyWebService?WSDL</wsdlLocation>
-                            <staleFile>${project.build.directory}/jaxws/stale/MyWebService_1.stale</staleFile>
-                        </configuration>
-                        <id>wsimport-generate-MyWebService_1</id>
-                        <phase>generate-sources</phase>
-                    </execution>
                 </executions>
                 <dependencies>
                     <dependency>

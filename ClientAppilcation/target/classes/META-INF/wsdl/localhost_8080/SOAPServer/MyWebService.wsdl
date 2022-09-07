@@ -4,21 +4,97 @@
 <xsd:import namespace="http://soapserver.mit.kln.lk/" schemaLocation="http://localhost:8080/SOAPServer/MyWebService?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="hello">
-<part name="parameters" element="tns:hello"/>
+<message name="add">
+<part name="parameters" element="tns:add"/>
 </message>
-<message name="helloResponse">
-<part name="parameters" element="tns:helloResponse"/>
+<message name="addResponse">
+<part name="parameters" element="tns:addResponse"/>
+</message>
+<message name="divide">
+<part name="parameters" element="tns:divide"/>
+</message>
+<message name="divideResponse">
+<part name="parameters" element="tns:divideResponse"/>
+</message>
+<message name="percentage">
+<part name="parameters" element="tns:percentage"/>
+</message>
+<message name="percentageResponse">
+<part name="parameters" element="tns:percentageResponse"/>
+</message>
+<message name="multiply">
+<part name="parameters" element="tns:multiply"/>
+</message>
+<message name="multiplyResponse">
+<part name="parameters" element="tns:multiplyResponse"/>
+</message>
+<message name="deduct">
+<part name="parameters" element="tns:deduct"/>
+</message>
+<message name="deductResponse">
+<part name="parameters" element="tns:deductResponse"/>
 </message>
 <portType name="MyWebService">
-<operation name="hello">
-<input wsam:Action="http://soapserver.mit.kln.lk/MyWebService/helloRequest" message="tns:hello"/>
-<output wsam:Action="http://soapserver.mit.kln.lk/MyWebService/helloResponse" message="tns:helloResponse"/>
+<operation name="add">
+<input wsam:Action="http://soapserver.mit.kln.lk/MyWebService/addRequest" message="tns:add"/>
+<output wsam:Action="http://soapserver.mit.kln.lk/MyWebService/addResponse" message="tns:addResponse"/>
+</operation>
+<operation name="divide">
+<input wsam:Action="http://soapserver.mit.kln.lk/MyWebService/divideRequest" message="tns:divide"/>
+<output wsam:Action="http://soapserver.mit.kln.lk/MyWebService/divideResponse" message="tns:divideResponse"/>
+</operation>
+<operation name="percentage">
+<input wsam:Action="http://soapserver.mit.kln.lk/MyWebService/percentageRequest" message="tns:percentage"/>
+<output wsam:Action="http://soapserver.mit.kln.lk/MyWebService/percentageResponse" message="tns:percentageResponse"/>
+</operation>
+<operation name="multiply">
+<input wsam:Action="http://soapserver.mit.kln.lk/MyWebService/multiplyRequest" message="tns:multiply"/>
+<output wsam:Action="http://soapserver.mit.kln.lk/MyWebService/multiplyResponse" message="tns:multiplyResponse"/>
+</operation>
+<operation name="deduct">
+<input wsam:Action="http://soapserver.mit.kln.lk/MyWebService/deductRequest" message="tns:deduct"/>
+<output wsam:Action="http://soapserver.mit.kln.lk/MyWebService/deductResponse" message="tns:deductResponse"/>
 </operation>
 </portType>
 <binding name="MyWebServicePortBinding" type="tns:MyWebService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="hello">
+<operation name="add">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="divide">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="percentage">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="multiply">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="deduct">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
